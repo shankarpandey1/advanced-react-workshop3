@@ -1,12 +1,15 @@
-// BusinessCardList Mod 5 Challenge 1
 import React, { useState } from "react";
-//import BusinessCard from "./BusinessCard";
-import BusinessCard from "./BusinessCardCh2";
+import BusinessCard from "./BusinessCard";
 import BusinessCardDetail from "./BusinessCardDetail";
 
 function BusinessCardList(props) {
   const { bizcards } = props;
   const [selectedCard, setSelectedCard] = useState(null);
+  const [showFavorites, setShowFavorites] = useState(false);
+
+  const filteredBizcards = showFavorites
+    ? bizcards.filter((card) => card.favorite)
+    : bizcards;
 
   if (selectedCard !== null) {
     const card = bizcards[selectedCard];
@@ -24,7 +27,15 @@ function BusinessCardList(props) {
 
   return (
     <div className="cards">
-      {bizcards.map((card, index) => (
+      <label>
+        <input
+          type="checkbox"
+          checked={showFavorites}
+          onChange={() => setShowFavorites(!showFavorites)}
+        />{" "}
+        Show favorites only
+      </label>
+      {filteredBizcards.map((card, index) => (
         <div onClick={() => setSelectedCard(index)} key={index}>
           <BusinessCard
             name={card.name}
@@ -32,6 +43,7 @@ function BusinessCardList(props) {
             email={card.email}
             tel={card.phone}
             photo={card.photo}
+            favorite={card.favorite}
           />
         </div>
       ))}

@@ -1,5 +1,7 @@
 import React from "react";
-import BusinessCardList from "./BusinessCardList";
+//import BusinessCardList from "./BusinessCardList";
+//import BusinessCardList from "./BusinessCardListCh2";
+import BusinessCardList from "./BusinessCardListFull"; //import BusinessCardList from "./BusinessCardList
 import bizcards from "./Data";
 import "./style.css";
 
