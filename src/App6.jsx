@@ -1,7 +1,6 @@
+// App.jsx
 import React from "react";
-//import BusinessCardList from "./BusinessCardList";
-//import BusinessCardList from "./BusinessCardListCh2";
-import BusinessCardList from "./BusinessCardListFull"; // " import BusinessCardList from "./BusinessCardList
+import BusinessCardList from "./BusinessCardListFull6";
 import bizcards from "./Data";
 import "./style.css";
 

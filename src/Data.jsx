@@ -1,3 +1,4 @@
+//
 const businessCards = [
   {
     id: 1,
@@ -28,8 +29,8 @@ const businessCards = [
   },
   {
     id: 4,
-    name: "Ali",
-    email: "ali@example.com",
+    name: "Alice",
+    email: "alice@example.com",
     tel: "444-4444",
     photo:
       "https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png",
@@ -37,8 +38,8 @@ const businessCards = [
   },
   {
     id: 5,
-    name: "Jason",
-    email: "jason@example.com",
+    name: "Bob",
+    email: "Bob@example.com",
     tel: "555-5555",
     photo:
       "https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png",

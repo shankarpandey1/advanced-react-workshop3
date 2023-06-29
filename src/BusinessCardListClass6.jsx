@@ -1,8 +1,6 @@
-// test No 5: all challenges
 import React, { useState } from "react";
 import BusinessCard from "./BusinessCard";
-//import BusinessCardDetail from "./BusinessCardDetail";
-import BusinessCardDetail from "./BusinessCardDetailFull"; // "  import BusinessCardDetail from "./BusinessCardDetail
+import BusinessCardDetail from "./BusinessCardDetailClass6";
 
 function BusinessCardList(props) {
   const { bizcards } = props;
@@ -24,6 +22,15 @@ function BusinessCardList(props) {
       }
     });
 
+  const handleUpdateContact = (updatedContact) => {
+    const updatedBizcards = [...bizcards];
+    updatedBizcards[selectedCard] = {
+      ...updatedBizcards[selectedCard],
+      ...updatedContact,
+    };
+    props.onUpdateBizcards(updatedBizcards);
+  };
+
   if (selectedCard !== null) {
     const card = filteredBizcards[selectedCard];
     return (
@@ -39,6 +46,7 @@ function BusinessCardList(props) {
           card.favorite = !card.favorite;
           setSelectedCard(null);
         }}
+        onUpdateContact={handleUpdateContact}
       />
     );
   }
