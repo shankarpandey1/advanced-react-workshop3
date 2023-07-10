@@ -1,10 +1,14 @@
 # Module 5
 
-### `Class 6`
+# Upto Class 5 and Class 6
 
 The last implementation is related to:
 App6.jsx
 BusinessCardDetailFull6.jsx
 BusinessCardListFull6.jsx
 
-The number 6 means `class 6`
+## Modules used :
+
+# search box for search for a pattern in contacts names.
+
+# sort option (ascending, descending). 
